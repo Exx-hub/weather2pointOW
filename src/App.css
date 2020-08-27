@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+}
+
+body {
+  background-image: url("./weatherbg.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+.app {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.form-container {
+  flex: 0 1 auto;
+}
+
+form {
+  margin-top: 50px;
+  /* border: 2px solid yellow; */
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  outline: none;
+}
+
+.form input {
+  margin: 0 15px;
+  padding: 5px 20px;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  border-bottom: 2px solid gray;
+  color: whitesmoke;
+}
+::placeholder {
+  color: whitesmoke;
+  opacity: 0.5;
+}
+.form input:focus {
+  border-bottom: 2px solid orange;
+}
+.form button {
+  padding: 0 25px;
+  font-size: 1.2em;
+  background-color: #e3a702;
+  border-radius: 10px;
+}
+
+.weather-card {
+  height: auto;
+  flex: 1 1 auto;
+}
+
+.location {
+  font-size: 3em;
+  text-align: center;
+  margin: 15px;
+}
+.icon {
+  text-align: center;
+  font-size: 7em;
+}
+.temp {
+  font-size: 3em;
+  text-align: center;
+}
+.minmax {
+  text-align: center;
+  font-size: 2em;
+  margin: 10px 0;
+}
+.minmax span {
+  padding: 0 25px;
+}
+
+.desc {
+  text-align: center;
+  font-size: 2em;
+  margin: 15px 0;
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 2em;
+}
+
+.cover {
+  font-size: 8em;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: 100px;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 828px) {
+  .form button,
+  .form input {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .form button,
+  .form input {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 631px) {
+  .form button,
+  .form input {
+    padding: 3px 10px;
+  }
+}
+@media screen and (max-width: 561px) {
+  .form button,
+  .form input {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  .form {
+    margin: 0 50px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  .location {
+    font-size: 2.3em;
+  }
+}
