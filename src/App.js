@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Form from "./components/Form";
@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState({});
   const [show, setShow] = useState(false);
 
-  const getWeather = async (city, country) => {
+  const getWeather = useCallback(async (city, country) => {
     try {
       const result = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=8a7ece7c8d9c1de8f1439a34f030c2ad`
@@ -22,7 +22,7 @@ function App() {
 
       setTimeout(() => setShow(false), 2500);
     }
-  };
+  }, []);
 
   return (
     <div className="app">

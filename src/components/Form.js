@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Form({ getWeather }) {
   const [cityInput, setCityInput] = useState("");
@@ -12,6 +12,10 @@ function Form({ getWeather }) {
       setCountryInput("");
     }
   };
+
+  useEffect(() => {
+    getWeather("manila", "ph");
+  }, [getWeather]);
 
   return (
     <div className="form-container">
